@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+body {
+  background-color: #fafafa;
+}
+.hero-section {
+  min-height: 100vh;
+  background: url("./assets/BG\ 2.svg");
+  background-size: cover;
+  display: flex;
+  width: 100%;
+}
+
+.left {
+  flex: 0.5;
+  color: #fff;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+}
+
+.logo {
+  margin: 30px 20px;
+}
+h1.main-heading {
+  font-size: 2.75rem;
+  font-weight: 800;
+  padding: 0 10px 0 0;
+}
+p.subheading {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.right {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  width: 70%;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 40px;
+  height: 100%;
+}
+input {
+  height: 60px;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  border: 1px solid #ffc425;
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+input[type="checkbox"] {
+  width: unset;
+  appearance: none;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #ffc425;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: auto 0;
+}
+.checkbox-wrapper {
+  position: relative;
+}
+.checkbox-wrapper > img {
+  cursor: pointer;
+  position: absolute;
+  height: 20px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ img {
+  display: block;
+  pointer-events: none;
+}
+
+input::placeholder {
+  font-size: 1.25rem;
+}
+
+.tnc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.tnc > label {
+  margin-left: 20px;
+}
+button.cta {
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  width: 80%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  background-color: #ffc425;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-section {
+  padding: 3rem 6rem;
+  text-align: center;
+}
+
+.main-section-heading {
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 0 auto;
+}
+
+p.main-section-sub-heading {
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.glide {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+.glide__arrows {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 115%;
+}
+.arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.arrow-right {
+  transform: rotateY(180deg);
+}
+svg:hover path {
+  fill: #2b69fe;
+}
+.slide {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.left-image {
+  position: relative;
+}
+
+.author-name {
+  position: absolute;
+  bottom: 30px;
+  left: 75%;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.author-name::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.author-1::before {
+  content: "NASSCOM";
+}
+
+.author-2::before {
+  content: "Grasim Industries Limited";
+  text-transform: uppercase;
+}
+
+.author-3::before {
+  content: "THE WIRE";
+}
+
+.right-text {
+  position: relative;
+}
+
+.right-text::before {
+  content: "\275D";
+  position: absolute;
+  font-size: 4rem;
+  top: -36px;
+  opacity: 0.1;
+  left: -5px;
+  z-index: -1;
+}
+
+.right-text::after {
+  content: "\275E";
+  position: absolute;
+  font-size: 4rem;
+  bottom: -40px;
+  opacity: 0.1;
+  right: -5px;
+  z-index: -1;
+}
+
+.footer {
+  padding: 10px 0 10px 50px;
+  background-color: #1e3b70;
+  color: #fff;
+  font-size: 12px;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.company-logo {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  list-style: none;
+}
+
+.zf-errorMessage {
+  margin-bottom: 15px;
+  margin-top: -20px;
+  color: red;
+}
+
+@media screen and (max-width: 1030px) {
+  .form-wrapper {
+    width: 90%;
+  }
+  .main-section {
+    padding: 3rem 4rem;
+  }
+  .glide__arrows {
+    width: 125%;
+  }
+  .author-name {
+    bottom: 18px;
+  }
+  .glide {
+    width: 80%;
+  }
+  .main-heading {
+    padding: 0;
+  }
+  .content {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+  }
+  .left {
+    text-align: center;
+  }
+
+  .content {
+    left: 0;
+    margin-top: 9rem;
+  }
+  .right {
+    margin-top: 14rem;
+  }
+  .form-wrapper {
+    width: 70%;
+    margin-bottom: 4rem;
+  }
+
+  .main-section {
+    padding: 3rem 2rem;
+  }
+  .author-name {
+    bottom: 18px;
+    font-size: 1.3rem;
+  }
+  .glide {
+    width: 80%;
+  }
+  .slide {
+    display: block;
+  }
+  .left-image {
+    width: 80%;
+  }
+  .right-text {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .right {
+    margin-top: 20rem;
+  }
+  .form-wrapper {
+    width: 90%;
+  }
+  .content {
+    margin-top: 12rem;
+  }
+  .footer {
+    text-align: center;
+  }
+  .glide__arrows {
+    width: 130%;
+  }
+  .left-image {
+    width: 40%;
+  }
+  .right-text {
+    margin-top: 40px;
+  }
+}
+.name-wrapper {
+  display: flex;
+}
+.first-name {
+  margin-right: 15px;
+  flex: 0.5;
+}
+.last-name {
+  flex: 0.5;
+}
